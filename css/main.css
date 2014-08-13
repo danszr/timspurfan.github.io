@@ -228,14 +228,9 @@ video {
   width: 100% !important;
   height: auto !important;
 }
-
 .header{
   display: none;
 }
-.header-after{
-  display: block;
-}
-
 .fa{
   margin: 10px;
 }

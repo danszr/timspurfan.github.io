@@ -234,8 +234,9 @@
     <script>
         $(function(){
             $('video').bind("ended", function(){
-                $('video').remove();
-                $('.header').addClass('header-after');
+                $('video').fadeOut(1000, function(){
+                    $('.header').fadeIn(1000);
+            });
         });
     });
     </script>
