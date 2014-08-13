@@ -227,6 +227,7 @@ i.scroll:hover {
 video {
   width: 100% !important;
   height: auto !important;
+  border-radius: 20px;
 }
 .header{
   display: none;
