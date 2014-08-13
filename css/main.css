@@ -275,9 +275,9 @@ video {
 	height: 75%;
   }
 }
-@media (min-width: 1020px) {
+@media (min-width: 1400px) {
 
   video {
       height: 100% !important;
   }
-}
+}*/
