@@ -262,6 +262,9 @@ video {
   right: 0;
   z-index: 5;
 }
+.social button{
+  border: none;
+}
 
 /* Responsive */
 
