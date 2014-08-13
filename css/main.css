@@ -249,9 +249,8 @@ video {
   color: #DD4B39;
 }
 .insta{
-  width: 36px;
-  height: 42px;
-  margin: 10px;
+  height: 38px;
+  margin: 11px 10px 10px 10px;
   vertical-align: top;
 }
 .fa-youtube-square{
