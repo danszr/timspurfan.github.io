@@ -255,7 +255,15 @@ video {
 .fa-linkedin-square{
   color: #007BB6;
 }
-
+.menu{
+  position: fixed;
+  top: 20%;
+  right: 0;
+  z-index: 5;
+}
+button{
+  padding: 0 !important;
+}
 /* Responsive */
 
 @media (max-width: 768px) {
@@ -271,8 +279,11 @@ video {
   .map {
 	height: 75%;
   }
-  
+  .menu{
+    display: none;
+  }
 }
+
 @media (min-width: 1400px) {
 
   video {
