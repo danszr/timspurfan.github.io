@@ -234,7 +234,24 @@
                     $('.header').fadeIn(1000);
             });
         });
+            $('video').bind("ended", function(){
+                $('video').fadeOut(1000, function(){
+                    $('.header').fadeIn(1000);
+            });
+        });
     });
+    $(document).bind('keyup', function(e) {
+
+      if(e.keyCode==39){
+        $('a.right').trigger('click');
+      }   
+
+      else if(e.keyCode==37){
+        $('a.left').trigger('click');
+      }
+
+});
+
     </script>
 </body>
 
