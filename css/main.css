@@ -298,6 +298,9 @@ video {
   .social{
     display: inline-block;
   }
+  .vert-text h1{
+    font-size: 25px;
+  }
 }
 
 @media screen and (max-width: 490px) {
