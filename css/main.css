@@ -259,7 +259,7 @@ video {
 .menu{
   position: fixed;
   top: 10%;
-  right: 0;
+  left: 0;
   z-index: 5;
 }
 .social button{
