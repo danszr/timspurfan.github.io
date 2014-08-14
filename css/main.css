@@ -250,6 +250,9 @@ video {
   margin: 12px 10px 14px 10px;
   vertical-align: top;
 }
+.instalink{
+  padding: 6px 12px 5px 12px;
+}
 .fa-youtube-square{
   color: #CD201F;
 }
@@ -258,12 +261,17 @@ video {
 }
 .menu{
   position: fixed;
-  top: 10%;
-  left: 0;
+  top: 0;
   z-index: 5;
 }
-.social button{
+.social a, .menu a{
   border: none;
+}
+.social{
+  display: none;
+}
+.social a{
+  padding: 0;
 }
 
 /* Responsive */
@@ -284,7 +292,9 @@ video {
   .menu{
     display: none;
   }
-
+  .social{
+    display: inline-block;
+  }
 }
 
 @media (min-width: 1400px) {
