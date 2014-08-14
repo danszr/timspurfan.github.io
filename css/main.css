@@ -273,6 +273,11 @@ video {
 
 .social div{
   display: inline-block;
+  padding: 0;
+}
+
+.social div a{
+  padding: 0;
 }
 
 /* Responsive */
