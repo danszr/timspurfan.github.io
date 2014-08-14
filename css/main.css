@@ -270,9 +270,7 @@ video {
 .social{
   display: none;
 }
-.social div a{
-  padding: 0;
-}
+
 .social div{
   display: inline-block;
 }
@@ -299,26 +297,13 @@ video {
     display: inline-block;
   }
   .vert-text h1{
-    font-size: 25px;
+    font-size: 35px;
   }
-}
-
-@media screen and (max-width: 490px) {
-  .social div{
-    display: block;
-  }
-
 }
 
 @media screen and (min-width: 1400px) {
 
   video {
       height: 100% !important;
-  }
-}
-
-@media screen and (max-width: 1080px) {
-  button{
-    padding: 0 !important;
   }
 }
