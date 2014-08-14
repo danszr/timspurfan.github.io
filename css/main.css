@@ -264,19 +264,22 @@ video {
   top: 0;
   z-index: 5;
 }
-.social a, .menu a{
+.social div a, .menu a{
   border: none;
 }
 .social{
   display: none;
 }
-.social a{
+.social div a{
   padding: 0;
+}
+.social div{
+  display: inline-block;
 }
 
 /* Responsive */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	
 /*  .header {
 	background: url(../img/bg.jpg) no-repeat center center scroll; 
@@ -297,14 +300,21 @@ video {
   }
 }
 
-@media (min-width: 1400px) {
+@media screen and (max-width: 490px) {
+  .social div{
+    display: block;
+  }
+
+}
+
+@media screen and (min-width: 1400px) {
 
   video {
       height: 100% !important;
   }
 }
 
-@media (max-width: 1080px) {
+@media screen and (max-width: 1080px) {
   button{
     padding: 0 !important;
   }
