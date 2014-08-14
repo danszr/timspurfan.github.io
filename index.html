@@ -334,10 +334,12 @@
       }
        else if(e.keyCode==27){
         $('video').fadeOut(1000, function(){
-            $('.header').fadeIn(1000);
+            $('.header').fadeIn(1000, function(){
+                $('.carousel').carousel(0);
+            });
         });
       }
-});
+    });
 
     </script>
 </body>
