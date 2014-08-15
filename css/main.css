@@ -4,14 +4,16 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: 'Playfair Display', serif;;
+  font-family: 'Playfair Display', serif;
 }
 
+.vert-wrap{
+  height: 80%;
+}
 .vert-text {
   display: block;
   vertical-align: middle;
   text-align: center;
-  height: 80%;
 }
 
 .vert-text h1 {
@@ -19,14 +21,19 @@ body {
   font-size: 140px;
   font-weight: 400;
   letter-spacing: 3px;
-  /*width: 0;*/
+  margin: 200px auto 0;
+  /*width: 0;
+  display: none;*/
 }
 
 .vert-text h3 {
   font-size: 50px;
   font-weight: 100;
   letter-spacing: 2px;
-  /*width: 0;*/
+  padding-right: 70px;
+  margin: 100px auto 0;
+  /*width: 0;
+  display: none;*/
 }
 
 /* Side Menu */
