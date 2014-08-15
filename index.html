@@ -21,13 +21,13 @@
     <link href='http://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
     <div class="menu">
-        <nav class="btn-group">
-            <a href="#about" class="btn btn-default">About</a>
-            <a href="#education" class="btn btn-default">Education</a>
-            <a href="#organizations" class="btn btn-default">Organizations</a>
-            <a href="#rubik" class="btn btn-default">Rubik's Cube</a>
+        <nav id="#navbar-main" class="btn-group navbar">
+            <a href="#about" class="btn btn-default smoothScroll">About</a>
+            <a href="#education" class="btn btn-default smoothScroll">Education</a>
+            <a href="#organizations" class="btn btn-default smoothScroll">Organizations</a>
+            <a href="#rubik" class="btn btn-default smoothScroll">Rubik's Cube</a>
         </nav>
         <div class="menu-social btn-group">
                 <a href="mailto:andy@theandysmith.com" class="btn btn-default">
@@ -339,6 +339,7 @@
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/smoothscroll.js"></script>
     <script>
     $(document).ready(function(){
 
