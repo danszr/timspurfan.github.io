@@ -4,7 +4,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: Lato;
+  font-family: 'Playfair Display', serif;;
 }
 
 .vert-text {
@@ -320,11 +320,11 @@ nav a.btn{
     font-size: 35px;
   }
 }
-/*@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1230px) {
   nav{
     display: none;
   }
-}  */
+}  
 
 @media screen and (min-width: 1400px) {
 
