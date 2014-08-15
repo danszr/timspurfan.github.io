@@ -64,7 +64,8 @@
         </div>
     </div>
 
-   <video id="the-video" preload="auto" muted autoplay>
+    <img class="white" src="img/white.jpg" alt="...">
+    <video id="the-video" preload="auto" muted>
         <source src="video/andy.mp4">
         <source src="video/andy.webm">
         <source src="video/andy.ogg">
@@ -72,7 +73,6 @@
     </video>
 
    <div id="top" class="header">
-
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="false">
           <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -340,6 +340,19 @@
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
+    $(document).ready(function(){
+
+            setTimeout(function(){
+            $('.white').fadeOut(1000, function(){
+                $('video').fadeIn(1000, function(){
+                    $('video').get(0).play();
+                });
+            });
+        
+        }, 2000);
+
+    });
+
         $(function(){
             $('video').bind("ended", function(){
                 $('video').fadeOut(1000, function(){
