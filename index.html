@@ -64,7 +64,10 @@
         </div>
     </div>
 
-    <img class="white" src="img/white.jpg" alt="...">
+    <div class="vert-text">
+        <h1>Andy Smith</h1>
+        <h3>Student | Pioneer</h3>
+    </div>
     <video id="the-video" preload="auto" muted>
         <source src="video/andy.mp4">
         <source src="video/andy.webm">
@@ -341,61 +344,61 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script>
-    $(document).ready(function(){
+        // $(document).ready(function(){
+        //     $('.vert-text h1').animate({
+        //         width: "100%",
+        //         height: "100%"
+        //       }, 5000, function() {
+        //         // Animation complete.
+        //       });
+
+        //     $('.vert-text h3').animate({
+        //         width: "100%",
+        //         height: "100%"
+        //       }, 5000, function() {
+        //         // Animation complete.
+        //       });
+        //     });
+
+
+
 
             setTimeout(function(){
-            $('.white').fadeOut(1000, function(){
-                $('video').fadeIn(1000, function(){
-                    $('video').get(0).play();
+                $('.vert-text').fadeOut(1000, function(){
+                    $('video').fadeIn(1000, function(){
+                        $('video').get(0).play();
+                    });
                 });
-            });
-        
-        }, 1750);
+            
+            }, 1750);
 
-    });
-
-        $(function(){
-            $('video').bind("ended", function(){
-                $('video').fadeOut(1000, function(){
-                    $('.header').fadeIn(1000, function(){
-                        $('.carousel').carousel(0);
-                        $('video').remove();
+            $(function(){
+                $('video').bind("ended", function(){
+                    $('video').fadeOut(1000, function(){
+                        $('.header').fadeIn(1000, function(){
+                            $('.carousel').carousel(0);
+                            $('video').remove();
+                    });
                 });
             });
         });
-    });
-    $(document).bind('keyup', function(e) {
+        $(document).bind('keyup', function(e) {
 
-      if(e.keyCode==39){
-        $('a.right').trigger('click');
-      }   
-      else if(e.keyCode==37){
-        $('a.left').trigger('click');
-      }
-       else if(e.keyCode==27){
-        $('video').fadeOut(1000, function(){
-            $('.header').fadeIn(1000, function(){
-                $('.carousel').carousel(0);
-                $('video').remove();
+          if(e.keyCode==39){
+            $('a.right').trigger('click');
+          }   
+          else if(e.keyCode==37){
+            $('a.left').trigger('click');
+          }
+           else if(e.keyCode==27){
+            $('video').fadeOut(1000, function(){
+                $('.header').fadeIn(1000, function(){
+                    $('.carousel').carousel(0);
+                    $('video').remove();
+                });
             });
+          }
         });
-      }
-    });
-
-    /*$(function() {
-          $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              if (target.length) {
-                $('html,body').animate({
-                  scrollTop: target.offset().top
-                }, 1000);
-                return false;
-              }
-            }
-          });
-        });*/
     </script>
 </body>
 
