@@ -247,7 +247,7 @@ video {
 }
 .insta{
   height: 37px;
-  margin: 12px 10px 14px 10px;
+  margin: 12px 10px 12px 10px;
   vertical-align: top;
 }
 .instalink{
@@ -288,7 +288,6 @@ nav{
   display: inline-block;
 }
 nav a.btn{
-  margin: 0 15px;
   font-size: 35px;
   vertical-align: middle;
   border: none;
