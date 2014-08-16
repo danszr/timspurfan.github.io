@@ -304,7 +304,6 @@ video {
 .navbar-main{
   display: inline-block;
   vertical-align: middle;
-  z-index: 20;
 }
 .nav li{
   display: inline-block;
@@ -405,16 +404,25 @@ figure:hover:before {
   .menu{
     display: none;
   }
+}
+
+@media screen and (min-width: 965px) and (max-width: 1160px) {
+
+  .nav li a{
+    font-size: 20px;
+    margin-top: 6px;
+  }
+}
+
+@media screen and (max-width: 964px) {
+
+  .menu-social{
+    display: none;
+  }
   .social{
     display: inline-block;
   }
 }
-
-@media screen and (max-width: 1230px) {
-  .navbar-main{
-    display: none;
-  }
-}  
 
 @media screen and (min-width: 1400px) {
 
