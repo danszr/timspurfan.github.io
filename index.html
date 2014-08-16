@@ -29,6 +29,10 @@
         //     $('.vert-text h1').trigger('click');
         // });
 
+            $('[data-spy="scroll"]').each(function () {
+              var $spy = $(this).scrollspy('refresh')
+            })
+
             setTimeout(function(){
                 $('.white').fadeOut(1000, function(){
                     $('video').fadeIn(1000, function(){
@@ -68,14 +72,24 @@
     </script>
 </head>
 
-<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+<body data-spy="scroll" data-offset="64" data-target=".navbar-main">
     <div class="menu">
-        <nav id="#navbar-main" class="btn-group navbar">
-            <a href="#about" class="btn btn-default smoothScroll">About</a>
-            <a href="#education" class="btn btn-default smoothScroll">Education</a>
-            <a href="#organizations" class="btn btn-default smoothScroll">Organizations</a>
-            <a href="#rubik" class="btn btn-default smoothScroll">Rubik's Cube</a>
-        </nav>
+        <div class="navbar-main">
+            <ul class="btn-group nav navbar">
+                <li>
+                    <a href="#about" class="btn btn-default smoothScroll">About</a>
+                </li>
+                <li>
+                    <a href="#education" class="btn btn-default smoothScroll">Education</a>
+                </li>
+                <li>
+                    <a href="#organizations" class="btn btn-default smoothScroll">Organizations</a>
+                </li>
+                <li>
+                    <a href="#rubik" class="btn btn-default smoothScroll">Rubik's Cube</a>
+                </li>
+            </ul>
+        </div>
         <div class="menu-social btn-group">
                 <a href="mailto:andy@theandysmith.com" class="btn btn-default">
                     <i class="fa fa-envelope-o fa-3x"></i>

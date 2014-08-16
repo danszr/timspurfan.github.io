@@ -5,6 +5,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: 'Playfair Display', serif;
+  position: relative;
 }
 
 .vert-wrap{
@@ -300,16 +301,22 @@ video {
   padding: 0;
 }
 
-nav{
+.navbar-main{
   display: inline-block;
   vertical-align: middle;
   z-index: 20;
 }
-nav a.btn{
+.nav li{
+  display: inline-block;
+}
+.nav li a{
   font-size: 30px;
   vertical-align: middle;
   border: none;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
+}
+.active a{
+  background-color: #eee;
 }
 .white{
   width: 100%;
@@ -404,7 +411,7 @@ figure:hover:before {
 }
 
 @media screen and (max-width: 1230px) {
-  nav{
+  .navbar-main{
     display: none;
   }
 }  
