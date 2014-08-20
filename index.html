@@ -53,6 +53,16 @@
                 });
             });
         });
+
+        $(function(){
+            $('.header').on( "swiperight", function(event) {
+                $('a.right').trigger('click');
+            });
+            $('.header').on( "swipeleft", function(event) {
+                $('a.left').trigger('click');
+            });
+        });
+
         $(document).bind('keyup', function(e) {
 
           if(e.keyCode==39){
