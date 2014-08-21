@@ -258,13 +258,8 @@ video {
 .fa-google-plus-square{
   color: #DD4B39;
 }
-.insta{
-  height: 37px;
-  margin: 12px 10px 13px 10px;
-  vertical-align: top;
-}
-.instalink{
-  padding: 6px 12px 5px 12px;
+.fa-instagram{
+  color: #4E433C;
 }
 .fa-youtube-square{
   color: #CD201F;
