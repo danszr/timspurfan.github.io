@@ -90,7 +90,7 @@
     </script>
     <script>
             $(function() {
-                $('#email-form').submit(function (evt) {
+                $('form').submit(function (evt) {
                     evt.preventDefault();
 
                     $.ajax({
@@ -113,16 +113,17 @@
                                   }
                                 ],
                               'autotext': 'true',
-                              'subject': 'The Andy Smith Contact',
-                              'html': '<span>Email Address: </span>' + $("#email").val() + '<br><br>' + '<span>Message: </span>' + $("#message").val()
+                              'subject': $("#subject").val(),
+                              'html': '<span>Message: </span>' + $("#message").val()
                             }
                           }
                          }).done(function(response) {
                            console.log(response); // if you're into that sorta thing
                         });
 
-                    $("#email-form").get(0).reset();
-
+                    $('form').get(0).reset();
+                    $('form').toggleClass('formclicked');
+                    $('.formsent').text('Sent!');
                 });
             });
     </script>
@@ -430,9 +431,13 @@
     <!-- /Portfolio -->
 
     <!-- Email Form -->
+    <div class="formsent"></div>
     <form role="form" id="email-form" method="post">
         <div class="form-group">
             <input type="email" class="form-control" id="email" placeholder="Email Address" name="email" required>
+        </div>
+        <div class="form-group subject">
+            <input type="subject" class="form-control" id="subject" placeholder="Subject" name="subject" required>
         </div>
         <div class="form-group">
             <textarea class="form-control" id="message" placeholder="Message" name="message"required></textarea>
