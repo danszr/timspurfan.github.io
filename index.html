@@ -46,14 +46,14 @@
             }, 1750);
 
             $(function(){
-                $('video').bind("ended", function(){
+                setTimeout(function(){
                     $('video').fadeOut(1000, function(){
                         $('.header').fadeIn(1000, function(){
                             $('.carousel').carousel(0);
                             $('video').remove();
                     });
                 });
-            });
+            }, 15750);
         });
 
         $(function(){
@@ -95,7 +95,7 @@
     </script>
 </head>
 
-<body data-spy="scroll" data-offset="80" data-target=".navbar-main">
+<body data-spy="scroll" data-offset="65" data-target=".navbar-main">
     <div class="menu">
         <div class="navbar-main">
             <ul class="btn-group nav navbar">
