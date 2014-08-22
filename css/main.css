@@ -319,7 +319,7 @@ video {
 .ui-loader{
   display: none;
 }
-.subject, .message{
+.email, .subject, .message{
   margin: 0;
 }
 form{
