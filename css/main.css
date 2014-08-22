@@ -319,6 +319,15 @@ video {
 .ui-loader{
   display: none;
 }
+form{
+  display: none;
+  position: fixed;
+  top: 65px;
+  right: 20%;
+}
+.formclicked{
+  display: block;
+}
 
 /*image captions*/
 
@@ -405,7 +414,7 @@ figure:hover:before {
   }
 }
 
-@media screen and (min-width: 965px) and (max-width: 1160px) {
+@media screen and (min-width: 992px) and (max-width: 1200px) {
 
   .nav li a{
     font-size: 20px;
@@ -413,7 +422,7 @@ figure:hover:before {
   }
 }
 
-@media screen and (max-width: 964px) {
+@media screen and (max-width: 991px) {
 
   .menu-social{
     display: none;
