@@ -35,10 +35,10 @@
 
         $(function(){
             $('.sendmail').click(function(){
-                $('form').toggleClass('formclicked');
+                $('#email-form').toggleClass('formclicked');
             });
         });
-
+        
         $(function(){
             setTimeout(function(){
                 $('.white').fadeOut(1000, function(){
@@ -90,7 +90,7 @@
     </script>
     <script>
             $(function() {
-                $('form').submit(function (evt) {
+                $('#email-form').submit(function (evt) {
                     evt.preventDefault();
 
                     $.ajax({
@@ -99,7 +99,7 @@
                           data: {
                             'key': 'Nf0e4MT_tFyq8DwHLXyVgQ',
                             'message': {
-                              'from_email': $("#email").val(),
+                              'from_email': $(".email-field-1").val(),
                               'to': [
                                   {
                                     'email': 'dselzer@optonline.net',
@@ -113,8 +113,8 @@
                                   }
                                 ],
                               'autotext': 'true',
-                              'subject': $("#subject").val(),
-                              'html': $("#message").val()
+                              'subject': $(".subject-field-1").val(),
+                              'html': $(".message-field-1").val()
                             }
                           }
                          }).done(function(response) {
@@ -122,7 +122,44 @@
                         });
 
                     $('form').get(0).reset();
-                    $('form').toggleClass('formclicked');
+                    $('#email-form').toggleClass('formclicked');
+                });
+            });
+
+            $(function() {
+                $('#modal-form').submit(function (evt) {
+                    evt.preventDefault();
+
+                    $.ajax({
+                          type: "POST",
+                          url: "https://mandrillapp.com/api/1.0/messages/send.json",
+                          data: {
+                            'key': 'Nf0e4MT_tFyq8DwHLXyVgQ',
+                            'message': {
+                              'from_email': $(".email-field-2").val(),
+                              'to': [
+                                  {
+                                    'email': 'dselzer@optonline.net',
+                                    'name': 'dan',
+                                    'type': 'to'
+                                  },
+                                  {
+                                    'email': 'andy@theandysmith.com',
+                                    'name': 'Andy',
+                                    'type': 'to'
+                                  }
+                                ],
+                              'autotext': 'true',
+                              'subject': $(".subject-field-2").val(),
+                              'html': $(".message-field-2").val()
+                            }
+                          }
+                         }).done(function(response) {
+                           console.log(response); // if you're into that sorta thing
+                        });
+
+                    $('form').get(1).reset();
+                    $('#email-modal').modal('hide');
                 });
             });
     </script>
@@ -433,17 +470,48 @@
     <form role="form" id="email-form" method="post">
         <fieldset>
             <div class="form-group email">
-                <input type="email" class="form-control" id="email" placeholder="Email Address" name="email" required>
+                <input type="email" class="form-control email-field-1" placeholder="Email Address" name="email" required>
             </div>
             <div class="form-group subject">
-                <input type="subject" class="form-control" id="subject" placeholder="Subject" name="subject" required>
+                <input class="form-control subject-field-1" placeholder="Subject" name="subject" required>
             </div>
             <div class="form-group message">
-                <textarea class="form-control" id="message" placeholder="Message" name="message"required></textarea>
+                <textarea class="form-control message-field-1" placeholder="Message" name="message" required></textarea>
             </div>
         </fieldset>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
+
+    <!-- Email Modal -->
+    <div class="modal fade" id="email-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Email Andy</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form" id="modal-form" method="post">
+                        <fieldset>
+                            <div class="form-group email">
+                                <input type="email" class="form-control email-field-2" placeholder="Email Address" name="email" required>
+                            </div>
+                            <div class="form-group subject">
+                                <input class="form-control subject-field-2" placeholder="Subject" name="subject" required>
+                            </div>
+                            <div class="form-group message">
+                                <textarea class="form-control message-field-2" placeholder="Message" name="message" required></textarea>
+                            </div>
+                        </fieldset>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -452,7 +520,7 @@
                 <div class="col-md-6 col-md-offset-3 text-center">
                     	<div class="social btn-group">
                             <div class="col-md-6">
-                                <a href="mailto:andy@theandysmith.com" class="btn btn-default">
+                                <a href="#" class="btn btn-default" data-toggle="modal" data-target="#email-modal">
                                     <i class="fa fa-envelope-o fa-3x"></i>
                                 </a>
 

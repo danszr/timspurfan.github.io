@@ -322,7 +322,7 @@ video {
 .email, .subject, .message{
   margin: 0;
 }
-form{
+#email-form{
   display: none;
   position: fixed;
   top: 65px;
@@ -330,12 +330,13 @@ form{
   width: 300px;
 }
 .formclicked{
-  display: block;
+  display: block !important;
 }
-fieldset{
+#email-form fieldset{
   background-color: white;
   border-radius: 5px;
 }
+
 /*image captions*/
 
 figure {
