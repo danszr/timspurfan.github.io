@@ -332,10 +332,6 @@ video {
 .formclicked{
   display: block !important;
 }
-#email-form fieldset{
-  background-color: white;
-  border-radius: 5px;
-}
 
 /*image captions*/
 
