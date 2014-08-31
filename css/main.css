@@ -258,8 +258,17 @@ video {
 .fa-google-plus-square{
   color: #DD4B39;
 }
-.fa-instagram{
-  color: #4E433C;
+.insta{
+  height: 38px;
+  margin: 12px 10px 10px 10px;
+}
+.blogger{
+  height: 40px;
+  margin: 10px 10px 10px 8px;
+}
+.instalink, .bloglink{
+  height: 62px;
+  width: 56px;
 }
 .fa-youtube-square{
   color: #CD201F;
