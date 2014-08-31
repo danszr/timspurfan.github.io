@@ -51,14 +51,14 @@
         });
 
         $(function(){
-            setTimeout(function(){
+            $('video').bind('ended', function (){
                 $('video').fadeOut(1000, function(){
                     $('.header').fadeIn(1000, function(){
                         $('.carousel').carousel(0);
                         $('video').remove();
                     });
                 });
-            }, 15750);
+            });
         });
 
         $(function(){
