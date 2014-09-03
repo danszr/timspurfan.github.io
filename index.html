@@ -51,7 +51,7 @@
         });
 
         $(function(){
-            $('video').bind('ended', function (){
+            $('video').on('ended', function (){
                 $('video').fadeOut(1000, function(){
                     $('.header').fadeIn(1000, function(){
                         $('.carousel').carousel(0);
@@ -70,7 +70,7 @@
             });
         });
 
-        $(document).bind('keyup', function(e) {
+        $(document).on('keyup', function(e) {
 
           if(e.keyCode==39){
             $('a.right').trigger('click');
